@@ -6,6 +6,14 @@ import usePagination, { DOTS } from "../hooks/usePagination";
 import React, { useMemo } from "react";
 import { nanoid } from "nanoid";
 
+interface PaginationProps {
+  currentPage: number;
+  totalCount: number;
+  pageSize: number;
+  pageSizeOptions: number[];
+  onPageChange: any;
+  onPageSizeOptionChange: any;
+}
 function Pagination({
   currentPage,
   totalCount,
@@ -13,7 +21,7 @@ function Pagination({
   pageSizeOptions,
   onPageChange,
   onPageSizeOptionChange
-}: any) {
+}: PaginationProps) {
   const paginationRange = useMemo(
     () =>
       usePagination({
@@ -55,7 +63,6 @@ function Pagination({
         const mid = paginationRange.length / 2;
         if (pageNumber === DOTS) {
           return (
-            // Provide each set of dots a unique identity
             <li key={idx < mid ? "dotsOne" : "dotsTwo"} className="dots">
               &#8230;
             </li>
@@ -69,7 +76,6 @@ function Pagination({
           >
             <button
               type="button"
-              // Do not remove the aria-label below, it is used for Hatchways automation.
               aria-label={`Goto page ${pageNumber}`}
               onClick={() => onPageChange(pageNumber)}
             >
@@ -83,7 +89,6 @@ function Pagination({
         <button
           type="button"
           className="arrowButton right"
-          // Do not remove the aria-label below, it is used for Hatchways automation.
           aria-label="Goto next page"
           onClick={onNext}
           disabled={
@@ -96,7 +101,6 @@ function Pagination({
 
       <select
         className="paginationSelector"
-        // Do not remove the aria-label below, it is used for Hatchways automation.
         aria-label="Select page size"
         value={pageSize}
         onChange={(e) => {

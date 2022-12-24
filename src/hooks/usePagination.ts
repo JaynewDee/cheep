@@ -1,6 +1,11 @@
 export const DOTS = "...";
 
-function usePagination({ currentPage, totalCount, pageSize }: any) {
+interface PaginationArgs {
+  currentPage: number;
+  totalCount: number;
+  pageSize: number;
+}
+function usePagination({ currentPage, totalCount, pageSize }: PaginationArgs) {
   const last = Math.ceil(totalCount / pageSize);
 
   if (last === 1) {
