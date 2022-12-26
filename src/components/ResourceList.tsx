@@ -1,16 +1,21 @@
-import React, { useState } from "react";
+import React, { useReducer, useState } from "react";
 
-import { resources } from "../data/resources";
+import { Resources, Tags } from "../data/resources";
+import { useTagsReducer } from "../reducers/tags";
 import Pagination from "./Pagination";
+import Resource from "./Resource";
+import TagFilter from "./TagFilter";
 
-const PAGE_SIZES = [1, 10, 25, 50, 100];
+const PAGE_SIZES = [1, 5, 10, 25];
 
 const ResourceList: React.FC<{}> = () => {
   const [currentPaginationData, setCurrentPaginationData] = useState({
-    data: resources,
+    data: Resources,
     pageSize: 10,
     currentPage: 1
   });
+
+  const [filterState, dispatch] = useTagsReducer({ currentFilters: [] });
 
   const { data, pageSize, currentPage } = currentPaginationData;
 
@@ -18,7 +23,8 @@ const ResourceList: React.FC<{}> = () => {
     const start = sizeChange * (pageNumber - 1);
     const end = sizeChange * pageNumber;
     setCurrentPaginationData({
-      data: resources.slice(start, end),
+      ...currentPaginationData,
+      data: Resources.slice(start, end),
       pageSize: sizeChange,
       currentPage: pageNumber
     });
@@ -26,19 +32,27 @@ const ResourceList: React.FC<{}> = () => {
 
   return (
     <div className="list-wrapper">
+      <TagFilter data={Array(Tags)} filterState={filterState} />
       <Pagination
         currentPage={currentPage}
-        totalCount={resources.length}
+        totalCount={Resources.length}
         pageSize={pageSize}
         pageSizeOptions={PAGE_SIZES}
         onPageChange={updatePage}
         onPageSizeOptionChange={updatePage}
       />
-      <ul aria-label="blog list" className="post-list">
-        {data.map((resource) => (
-          <p key={resource.id}>{resource.id}</p>
+      <div aria-label="resource list" className="resource-list">
+        {data.map(({ id, name, img, href, tags }) => (
+          <Resource
+            key={id}
+            id={id}
+            name={name}
+            img={img}
+            href={href}
+            tags={tags}
+          />
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

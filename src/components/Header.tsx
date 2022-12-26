@@ -12,7 +12,7 @@ const Header: React.FC<{}> = () => {
         <Title />
         <Subtitle />
         <Logo />
-        <hr></hr>
+        <hr className="hr-lg"></hr>
       </header>
     </>
   );
