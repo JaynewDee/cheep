@@ -109,6 +109,12 @@ const resources = [
     img: "",
     href: "https://getbootstrap.com/docs/5.0/examples/cheatsheet/",
     tags: ["bootstrap", "css", "framework", "style", "cheat sheet"]
+  },
+  {
+    name: "The Modern JavaScript Tutorial",
+    img: "",
+    href: "https://javascript.info/",
+    tags: ["javascript", "programming", "langugage", "tutorial"]
   }
 ];
 
