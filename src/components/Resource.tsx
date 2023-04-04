@@ -1,4 +1,5 @@
 import React from "react";
+import Tag from "./Tag";
 
 interface ResourceProps {
   id: string;
@@ -17,9 +18,7 @@ const Resource: React.FC<ResourceProps> = ({ id, name, img, href, tags }) => {
 
       <div className="tags">
         {tags.map((t) => (
-          <span className="tag" key={t}>
-            {t}
-          </span>
+          <Tag data={t} key={t} />
         ))}
       </div>
       <div className="">{img}</div>

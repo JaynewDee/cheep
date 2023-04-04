@@ -43,6 +43,7 @@ header {
 
 .hr-lg {
   width: 66%;
+  margin-top: 0;
 }
 .hr-sm {
   width: 33%;
@@ -53,15 +54,13 @@ header {
   margin: 1rem auto;
 }
 
-.filter-container {
-  margin-bottom: 6rem;
-}
 .filter-form {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
 }
+
 .filter-input {
   border: none;
   border-bottom: 1px solid white;
@@ -72,15 +71,17 @@ header {
 }
 
 .filter-input:focus {
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
+
 .suggestions-container {
-  overflow-y: scroll;
+  overflow-y: auto;
   width: 10rem;
   height: 12rem;
   display: flex;
   flex-flow: column nowrap;
-  margin: 0 auto;
+  margin: 0 auto 3rem;
+  box-shadow: inset 0px 3px 3px 1px rgba(15, 15, 15, 0.7);
 }
 
 .content-main {
@@ -119,9 +120,9 @@ header {
   border: 1px solid rgba(240, 240, 240, 0.7);
   background-color: rgba(15, 15, 15, 0.7);
   border-radius: 6px;
-  padding: 0.11rem 0.33rem;
-  margin: 0.11rem;
-  font-size: 0.66rem;
+  padding: 0.11rem 0.5rem;
+  margin: 0.22rem;
+  font-size: 0.77rem;
 }
 
 .tag:hover {

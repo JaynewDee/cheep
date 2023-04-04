@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Tag from "./Tag";
 
 interface TagFilterProps {
   data: string[];
@@ -7,11 +8,15 @@ interface TagFilterProps {
 
 const TagFilter: React.FC<TagFilterProps> = ({ data, filterState }) => {
   const [filterValue, setFilterValue] = useState("");
-  const [suggestions, setSuggestion] = useState<any[]>([]);
+  const [suggestions, setSuggestion] = useState<any[]>(data);
 
   const handleFilterChange = (e: any) => {
     const { value } = e.target;
-    setFilterValue(value);
+    if (value === "") {
+      setFilterValue("");
+    } else {
+      setFilterValue(value);
+    }
 
     const filtered = data.filter((tag) => tag.includes(filterValue));
     setSuggestion(filtered);
@@ -29,7 +34,7 @@ const TagFilter: React.FC<TagFilterProps> = ({ data, filterState }) => {
       </form>
       <div className="suggestions-container">
         {suggestions.map((suggestion) => (
-          <span className="tag">{suggestion}</span>
+          <Tag data={suggestion} key={suggestion} />
         ))}
       </div>
     </div>
