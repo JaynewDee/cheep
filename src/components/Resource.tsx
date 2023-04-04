@@ -10,7 +10,6 @@ interface ResourceProps {
 const Resource: React.FC<ResourceProps> = ({ id, name, img, href, tags }) => {
   return (
     <div className="resource-container">
-      {/* <div className="resource-id">{id}</div> */}
       <a className="resource-link" href={href} target="_blank">
         {name}
       </a>

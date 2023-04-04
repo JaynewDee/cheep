@@ -53,12 +53,14 @@ header {
   margin: 1rem auto;
 }
 
+.filter-container {
+  margin-bottom: 6rem;
+}
 .filter-form {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-  margin-bottom: 6rem;
 }
 .filter-input {
   border: none;
@@ -72,14 +74,13 @@ header {
 .filter-input:focus {
   transform: scale(1.1);
 }
-
-[data-suggestion]::after {
-  content: attr(data-suggestion);
-  position: relative;
-  background-color: white;
-  color: black;
-  height: 2rem;
-  width: 6rem;
+.suggestions-container {
+  overflow-y: scroll;
+  width: 10rem;
+  height: 12rem;
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0 auto;
 }
 
 .content-main {

@@ -114,7 +114,7 @@ const resources = [
     name: "The Modern JavaScript Tutorial",
     img: "",
     href: "https://javascript.info/",
-    tags: ["javascript", "programming", "langugage", "tutorial"]
+    tags: ["javascript", "programming", "language", "tutorial"]
   }
 ];
 

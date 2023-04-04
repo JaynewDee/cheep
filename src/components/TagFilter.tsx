@@ -7,21 +7,19 @@ interface TagFilterProps {
 
 const TagFilter: React.FC<TagFilterProps> = ({ data, filterState }) => {
   const [filterValue, setFilterValue] = useState("");
-  const [filteredTags, setFilteredTags] = useState(data);
-  const [suggestion, setSuggestion] = useState("");
+  const [suggestions, setSuggestion] = useState<any[]>([]);
 
   const handleFilterChange = (e: any) => {
-    console.log(filteredTags);
     const { value } = e.target;
-    const filtered = filteredTags.filter((tag) => tag.includes(filterValue));
-
-    setSuggestion(filtered[0]);
     setFilterValue(value);
+
+    const filtered = data.filter((tag) => tag.includes(filterValue));
+    setSuggestion(filtered);
   };
 
   return (
-    <div>
-      <form className="filter-form" data-suggestion={suggestion}>
+    <div className="filter-container">
+      <form className="filter-form">
         <input
           className="filter-input"
           value={filterValue}
@@ -29,6 +27,11 @@ const TagFilter: React.FC<TagFilterProps> = ({ data, filterState }) => {
           type="text"
         />
       </form>
+      <div className="suggestions-container">
+        {suggestions.map((suggestion) => (
+          <span className="tag">{suggestion}</span>
+        ))}
+      </div>
     </div>
   );
 };
