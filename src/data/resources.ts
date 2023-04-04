@@ -118,10 +118,9 @@ const resources = [
   }
 ];
 
-export const Tags: Set<string> = new Set(
-  resources.map(({ tags }) => tags).flat()
+export const Tags: string[] = Array(
+  ...new Set(resources.map(({ tags }) => tags).flat())
 );
-console.log(Tags);
 
 export const Resources = resources.map(({ name, img, href, tags }) =>
   Resource({ id: nanoid(), name, img, href, tags })

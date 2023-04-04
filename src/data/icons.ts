@@ -6,3 +6,9 @@ export const icons = [
     svg: GiNestBirds
   }
 ];
+
+export const tags = [
+  {
+
+  }
+]

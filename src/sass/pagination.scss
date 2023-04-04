@@ -9,13 +9,14 @@
 
   .paginationItem {
     display: flex;
+    transition: all 0.33s;
+
     button {
       background: transparent;
       height: 34px;
       width: 34px;
       border-radius: 50%;
       overflow: hidden;
-      transition: all 1s;
 
       &:hover {
         background-color: rgba(159, 159, 159, 0.295);
@@ -33,8 +34,7 @@
         background-color: rgba(159, 159, 159, 0.295);
         font-weight: 700;
         text-decoration: underline;
-        border-radius: 0%;
-        transition: all 1s;
+        border-radius: 15%;
       }
     }
 

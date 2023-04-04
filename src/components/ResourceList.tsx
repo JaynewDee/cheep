@@ -29,10 +29,11 @@ const ResourceList: React.FC<{}> = () => {
       currentPage: pageNumber
     });
   };
+  console.log(Tags);
 
   return (
     <div className="list-wrapper">
-      <TagFilter data={Array(Tags)} filterState={filterState} />
+      <TagFilter data={Tags} filterState={filterState} />
       <Pagination
         currentPage={currentPage}
         totalCount={Resources.length}

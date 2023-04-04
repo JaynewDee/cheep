@@ -5,9 +5,21 @@ const Footer: React.FC<{}> = () => {
     <footer
       style={{ marginBottom: "0", fontSize: ".66rem", fontStyle: "bold" }}
     >
-      <p>built by Joshua Newell Diehl</p>
+      <p
+        style={{
+          userSelect: "none",
+          cursor: "pointer",
+          width: "13rem",
+          margin: "0 auto"
+        }}
+      >
+        built by Joshua Newell Diehl
+      </p>
       <p>---</p>
-      <a href="mailto:jdiehl2236@gmail.com" style={{ color: "black" }}>
+      <a
+        href="mailto:jdiehl2236@gmail.com"
+        style={{ color: "black", userSelect: "none" }}
+      >
         EMAIL
       </a>
     </footer>
