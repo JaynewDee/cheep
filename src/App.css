@@ -53,12 +53,20 @@ header {
   margin: 1rem auto;
 }
 
+.filter-form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6rem;
+}
 .filter-input {
   border: none;
   border-bottom: 1px solid white;
-  margin-bottom: 1rem;
   padding: 0.33rem;
   transition: transform 0.33s;
+  font-family: "Unbounded", cursive;
+  width: 12rem;
 }
 
 .filter-input:focus {
@@ -67,9 +75,11 @@ header {
 
 [data-suggestion]::after {
   content: attr(data-suggestion);
-  position: absolute;
-  height: 50px;
-  width: 50px;
+  position: relative;
+  background-color: white;
+  color: black;
+  height: 2rem;
+  width: 6rem;
 }
 
 .content-main {

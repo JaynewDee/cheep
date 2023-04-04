@@ -15,20 +15,19 @@ const TagFilter: React.FC<TagFilterProps> = ({ data, filterState }) => {
     const { value } = e.target;
     const filtered = filteredTags.filter((tag) => tag.includes(filterValue));
 
-    setSuggestion(filtered[0] || "");
+    setSuggestion(filtered[0]);
     setFilterValue(value);
   };
 
   return (
     <div>
-      <form>
+      <form className="filter-form" data-suggestion={suggestion}>
         <input
-          data-suggestion={suggestion}
           className="filter-input"
           value={filterValue}
           onChange={handleFilterChange}
           type="text"
-        ></input>
+        />
       </form>
     </div>
   );
