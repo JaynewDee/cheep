@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from "react";
+import React, { useState } from "react";
 
 import { Resources, Tags } from "../data/resources";
 import { useTagsReducer } from "../reducers/tags";
@@ -29,7 +29,6 @@ const ResourceList: React.FC<{}> = () => {
       currentPage: pageNumber
     });
   };
-  console.log(Tags);
 
   return (
     <div className="list-wrapper">
@@ -43,7 +42,7 @@ const ResourceList: React.FC<{}> = () => {
         onPageSizeOptionChange={updatePage}
       />
       <div aria-label="resource list" className="resource-list">
-        {data.map(({ id, name, img, href, tags }) => (
+        {data.map(({ id, name, img, details, href, tags }) => (
           <Resource
             key={id}
             id={id}
@@ -51,6 +50,7 @@ const ResourceList: React.FC<{}> = () => {
             img={img}
             href={href}
             tags={tags}
+            details={details}
           />
         ))}
       </div>
