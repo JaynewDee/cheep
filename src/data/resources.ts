@@ -3,6 +3,18 @@ import { Resource } from "./models/resource";
 
 const resources = [
   {
+    name: "The `wasm-bindgen` Guide",
+    img: "",
+    href: "https://rustwasm.github.io/docs/wasm-bindgen/examples/hello-world.html",
+    tags: ["wasm", "rust", "cargo"]
+  },
+  {
+    name: "Hello wasm-pack!",
+    img: "",
+    href: "https://rustwasm.github.io/wasm-pack/book/tutorials/npm-browser-packages/using-your-library.html",
+    tags: ["wasm", "rust", "cargo", "language"]
+  },
+  {
     name: "NPM Cheat Sheet",
     img: "",
     href: "https://www.freecodecamp.org/news/npm-cheat-sheet-most-common-commands-and-nvm/",
@@ -24,7 +36,7 @@ const resources = [
     name: "Learn You a Haskell for Great Good!",
     img: "",
     href: "http://learnyouahaskell.com/chapters",
-    tags: ["haskell", "language", "programming", "functional"]
+    tags: ["haskell", "language", "functional"]
   },
   {
     name: "Bash Cheat Sheet",
@@ -48,7 +60,7 @@ const resources = [
     name: "RegExr - RegEx Playground",
     img: "",
     href: "https://regexr.com/",
-    tags: ["regex", "programming"]
+    tags: ["regex", "tools"]
   },
   {
     name: "Coolors - Color Templating",
@@ -90,19 +102,19 @@ const resources = [
     name: "The Rust Programming Language",
     img: "",
     href: "http://https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/first-edition/README.html.me/",
-    tags: ["rust", "language", "programming"]
+    tags: ["rust", "language"]
   },
   {
     name: "The Rust Cookbook",
     img: "",
     href: "https://rust-lang-nursery.github.io/rust-cookbook/intro.html",
-    tags: ["rust", "language", "programming", "algorithms"]
+    tags: ["rust", "language", "algorithms"]
   },
   {
     name: "TailwindCSS Cheat Sheet",
     img: "",
     href: "https://nerdcave.com/tailwind-cheat-sheet",
-    tags: ["rust", "language", "programming", "algorithms"]
+    tags: ["rust", "language", "algorithms"]
   },
   {
     name: "Bootstrap Cheat Sheet",
@@ -114,7 +126,7 @@ const resources = [
     name: "The Modern JavaScript Tutorial",
     img: "",
     href: "https://javascript.info/",
-    tags: ["javascript", "programming", "language", "tutorial"]
+    tags: ["javascript", "language", "tutorial"]
   }
 ];
 
