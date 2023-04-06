@@ -169,6 +169,22 @@ const resources = [
       "Bleghbleghvomit my furball really tie the room together play time, but decide to want nothing to do with my owner today, so plan your travel demand to be let outside at once, and expect owner to wait for me as i think about it. ",
     href: "https://javascript.info/",
     tags: ["javascript", "language", "tutorial"]
+  },
+  {
+    name: "Wasm By Example",
+    img: "",
+    details:
+      "Bleghbleghvomit my furball really tie the room together play time, but decide to want nothing to do with my owner today, so plan your travel demand to be let outside at once, and expect owner to wait for me as i think about it. ",
+    href: "https://wasmbyexample.dev/home.en-us.html",
+    tags: ["wasm", "tutorial", "rust", "javascript"]
+  },
+  {
+    name: "W3cub Docs - Rust",
+    img: "",
+    details:
+      "Bleghbleghvomit my furball really tie the room together play time, but decide to want nothing to do with my owner today, so plan your travel demand to be let outside at once, and expect owner to wait for me as i think about it.",
+    href: "https://docs1.w3cub.com/rust/",
+    tags: ["rust", "documentation", "tutorial"]
   }
 ];
 
